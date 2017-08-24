@@ -175,6 +175,93 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-HEXO主题配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/24/HEXO主题配置/">HEXO主题配置</a>
+    </h1>
+  
+
+        
+        <a href="/2017/08/24/HEXO主题配置/" class="archive-article-date">
+  	<time datetime="2017-08-24T15:55:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="安装主题-yilia"><a href="#安装主题-yilia" class="headerlink" title="安装主题: yilia"></a>安装主题: <a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">yilia</a></h1><h2 id="主题安装"><a href="#主题安装" class="headerlink" title="主题安装"></a>主题安装</h2><p>###Mac Terminal</p>
+<ul>
+<li>切换: cd Documents/Tristan.Blog</li>
+<li>下载: git clone <a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="external">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia</li>
+<li>更改: sublime text打开_config.yml，将theme修改为theme: yilia</li>
+<li>部署: npm install hexo-deployer-git –save</li>
+<li>发布: hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</li>
+</ul>
+<h2 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h2><ul>
+<li>切换: cd themes/yilia</li>
+<li>更改: sublime text打开_config.yml，具体更改内容写的很详细，如更改分类、友链、联系方式、头像等，目前暂时没有做访问统计、评论功能。</li>
+<li>部署: 配置完成后，cd ..退回到Tristan.Blog根目录，按照之前的部署(npm install hexo-deployer-git –save)、发布(hexo clean &amp;&amp; hexo g &amp;&amp; hexo d)即可完成!</li>
+</ul>
+<p>详细内容可以参考<a href="http://www.jianshu.com/p/1fb65c61fa4a" target="_blank" rel="external">像少年啦飞驰__</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/08/24/HEXO主题配置/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -358,6 +445,10 @@ MathJax.Hub.Queue(function() {
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
