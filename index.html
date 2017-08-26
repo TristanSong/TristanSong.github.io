@@ -192,15 +192,9 @@
         <h1 id="HEXO配置网易云音乐"><a href="#HEXO配置网易云音乐" class="headerlink" title="HEXO配置网易云音乐"></a>HEXO配置网易云音乐</h1><h2 id="网易云音乐外链"><a href="#网易云音乐外链" class="headerlink" title="网易云音乐外链"></a>网易云音乐外链</h2><ul>
 <li>进入网易云音乐，点击喜欢歌曲，找到‘生成外链播放器’，选择iframe插件。选择尺寸、是否自动播放，复制代码。</li>
 <li><p>将代码复制到Tristan.Blog\themes\yilia\layout_partial\left-col.ejs里(文件内和nav等级相同)，如下:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;nav class=&quot;header-music&quot;&gt;</div><div class="line">复制的网易云音乐外链代码</div><div class="line">&lt;/nav&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>调整css样式: 进入Tristan.Blog\themes\yilia\source\main.xx.css文件内，在末尾加入以下代码(具体可调整margin): </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">.header-music &#123;margin-top: 80px; margin-left: -46px;&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>以上大功告成！</p>
-</li>
-</ul>
-
+        
+          <a class="article-more-a" href="/2017/08/25/HEXO网易云音乐/#more">more >></a>
+        
       
 
       
@@ -276,16 +270,10 @@
         <h1 id="HEXO创建博客"><a href="#HEXO创建博客" class="headerlink" title="HEXO创建博客"></a>HEXO创建博客</h1><h2 id="HEXO删除博客"><a href="#HEXO删除博客" class="headerlink" title="HEXO删除博客"></a>HEXO删除博客</h2><p>在创建博客之前，我们先说一下如何删除博客，比较简单。</p>
 <ul>
 <li>删除: 在Tristan.Blog/source/_posts文件夹下找到待删除的.md后缀文件，直接删除.</li>
-<li>发布: 在Terminal下，cd Documents/Tristan.Blog后，输入hexo g &amp;&amp; hexo d即可完成部署及发布。</li>
-</ul>
-<h2 id="HEXO创建博客-1"><a href="#HEXO创建博客-1" class="headerlink" title="HEXO创建博客"></a>HEXO创建博客</h2><ul>
-<li>在Terminal下，cd Documents/Tristan.Blog后，输入hexo new ‘newfile’，即可在Tristan.Blog/source/_posts下生成newfile.md文件。</li>
-<li>用macdown打开输入内容，博客写完后即可部署(npm install hexo-deployer-git –save)、发布(hexo clean &amp;&amp; hexo g &amp;&amp; hexo d)。</li>
-</ul>
-<h2 id="MacDown使用规范总结"><a href="#MacDown使用规范总结" class="headerlink" title="MacDown使用规范总结"></a>MacDown使用规范总结</h2><ul>
-<li>具体macdown使用规范可以参考<a href="http://www.jianshu.com/p/148e26058916" target="_blank" rel="external">MacDown使用规范总结</a>。</li>
-</ul>
-
+<li>发布: 在Terminal下，cd Documents/Tristan.Blog后，输入hexo g &amp;&amp; hexo d即可完成部署及发布。
+        
+          <a class="article-more-a" href="/2017/08/25/HEXO创建博客/#more">more >></a>
+        
       
 
       
@@ -358,7 +346,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="安装主题-yilia"><a href="#安装主题-yilia" class="headerlink" title="安装主题: yilia"></a>安装主题: <a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">yilia</a></h1>
+        <h1 id="安装主题-yilia"><a href="#安装主题-yilia" class="headerlink" title="安装主题: yilia"></a>安装主题: <a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">yilia</a></h1><h2 id="主题安装"><a href="#主题安装" class="headerlink" title="主题安装"></a>主题安装</h2><h3 id="Mac-Terminal"><a href="#Mac-Terminal" class="headerlink" title="Mac Terminal"></a>Mac Terminal</h3><ul>
+<li>切换: cd Documents/Tristan.Blog</li>
+<li>下载: git clone <a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="external">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia
         
           <a class="article-more-a" href="/2017/08/24/HEXO主题配置/#more">more >></a>
         
