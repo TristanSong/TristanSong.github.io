@@ -169,6 +169,90 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-matplotlib中文乱码" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/26/matplotlib中文乱码/">matplotlib中文乱码</a>
+    </h1>
+  
+
+        
+        <a href="/2017/08/26/matplotlib中文乱码/" class="archive-article-date">
+  	<time datetime="2017-08-26T09:13:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="matplotlib中文乱码"><a href="#matplotlib中文乱码" class="headerlink" title="matplotlib中文乱码"></a>matplotlib中文乱码</h1><h2 id="获取matplotlib字体路径"><a href="#获取matplotlib字体路径" class="headerlink" title="获取matplotlib字体路径"></a>获取matplotlib字体路径</h2><ul>
+<li>进入mac terminal或者windows cmd:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">python3/python</div><div class="line">import matplotlib</div><div class="line">matplotlib.matplotlib_fname()</div></pre></td></tr></table></figure>
+<ul>
+<li>以上即可获得matplotlib字体配置文件matplotlibrc，在相应文件夹内可以找到font/ttf。</li>
+</ul>
+<h2 id="修改文件"><a href="#修改文件" class="headerlink" title="修改文件"></a>修改文件</h2><ul>
+<li>下载ttf字体，放入上一步获得的/font/ttf文件夹内。</li>
+<li>修改matplotlibrc文件，取消font.family, font.serif, font.sans-serif的注释‘#’号，并在font.serif, font.sans-serif后增加字体Monaco YaHei(是font name不是字体名称，windows下可以直接双击字体，上面显示font name)。</li>
+</ul>
+<h2 id="具体使用"><a href="#具体使用" class="headerlink" title="具体使用"></a>具体使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">import matplotlib.pyplot as plt</div><div class="line">plt.rcParams[&apos;font.sans-serif&apos;] = [&apos;Monaco YaHei&apos;] # 解决中文乱码问题</div><div class="line">plt.rcParams[&apos;axes.unicode_minus&apos;] = False # 解决正负号问题</div></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">matplotlib</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/08/26/matplotlib中文乱码/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-常州房市分析-4" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -847,6 +931,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">HEXO</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">matplotlib</a>
               </li>
              
               <li class="article-tag-list-item">
