@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="一地鸡毛">
 <meta property="og:description" content="matplotlib中文乱码">
 <meta property="og:locale" content="Chinese & English">
-<meta property="og:updated_time" content="2017-08-26T09:24:38.000Z">
+<meta property="og:updated_time" content="2017-08-27T03:53:13.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matplotlib中文乱码">
 <meta name="twitter:description" content="matplotlib中文乱码">
@@ -201,6 +201,10 @@
 <li>下载ttf字体，放入上一步获得的/font/ttf文件夹内。</li>
 <li>修改matplotlibrc文件，取消font.family, font.serif, font.sans-serif的注释‘#’号，并在font.serif, font.sans-serif后增加字体Monaco YaHei(是font name不是字体名称，windows下可以直接双击字体，上面显示font name)。</li>
 </ul>
+<h2 id="删除cache文件"><a href="#删除cache文件" class="headerlink" title="删除cache文件"></a>删除cache文件</h2><ul>
+<li>进入matplotlib的字体cache文件，删除，重启程序后matplotlib会重建cache文件，此时字体文件才可更新。具体cache目录使用以下命令：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">python\python3</div><div class="line">import matplotlib</div><div class="line">matplotlib.get_configdir()</div></pre></td></tr></table></figure>
 <h2 id="具体使用"><a href="#具体使用" class="headerlink" title="具体使用"></a>具体使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">import matplotlib.pyplot as plt</div><div class="line">plt.rcParams[&apos;font.sans-serif&apos;] = [&apos;Monaco YaHei&apos;] # 解决中文乱码问题</div><div class="line">plt.rcParams[&apos;axes.unicode_minus&apos;] = False # 解决正负号问题</div></pre></td></tr></table></figure>
       
 
