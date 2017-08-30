@@ -6,20 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>常州房市分析 - 1 | 一地鸡毛</title>
+  <title>常州住房分析 - 1 | 一地鸡毛</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="从百度地图搜索所有小区百度地图placeAPIpython爬虫">
-<meta name="keywords" content="数据分析,爬虫,常州房市">
+  <meta name="description" content="从百度地图搜索所有小区 首先，如果要从安居客、房天下等网站上爬取二手房源，我们得需要有小区名称，从而进行搜索爬取。 因此，本部分首先利用百度地图的API进行搜索、爬取常州的小区一系列相关信息。  百度地图placeAPI本文使用百度地图所提供的place API，具体参见网址百度地图place AP，具体使用方法为：  申请密钥（ak） ，作为访问服务的依据； 按照请求参数说明拼写发送HTTP/H">
+<meta name="keywords" content="数据分析,爬虫,常州住房">
 <meta property="og:type" content="article">
-<meta property="og:title" content="常州房市分析 - 1">
+<meta property="og:title" content="常州住房分析 - 1">
 <meta property="og:url" content="http://yoursite.com/2017/08/26/常州房市分析-1/index.html">
 <meta property="og:site_name" content="一地鸡毛">
-<meta property="og:description" content="从百度地图搜索所有小区百度地图placeAPIpython爬虫">
+<meta property="og:description" content="从百度地图搜索所有小区 首先，如果要从安居客、房天下等网站上爬取二手房源，我们得需要有小区名称，从而进行搜索爬取。 因此，本部分首先利用百度地图的API进行搜索、爬取常州的小区一系列相关信息。  百度地图placeAPI本文使用百度地图所提供的place API，具体参见网址百度地图place AP，具体使用方法为：  申请密钥（ak） ，作为访问服务的依据； 按照请求参数说明拼写发送HTTP/H">
 <meta property="og:locale" content="Chinese & English">
-<meta property="og:updated_time" content="2017-08-26T08:36:00.000Z">
+<meta property="og:image" content="http://ov73401nx.bkt.clouddn.com/baiduPlace_1.png">
+<meta property="og:updated_time" content="2017-08-30T15:58:08.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="常州房市分析 - 1">
-<meta name="twitter:description" content="从百度地图搜索所有小区百度地图placeAPIpython爬虫">
+<meta name="twitter:title" content="常州住房分析 - 1">
+<meta name="twitter:description" content="从百度地图搜索所有小区 首先，如果要从安居客、房天下等网站上爬取二手房源，我们得需要有小区名称，从而进行搜索爬取。 因此，本部分首先利用百度地图的API进行搜索、爬取常州的小区一系列相关信息。  百度地图placeAPI本文使用百度地图所提供的place API，具体参见网址百度地图place AP，具体使用方法为：  申请密钥（ak） ，作为访问服务的依据； 按照请求参数说明拼写发送HTTP/H">
+<meta name="twitter:image" content="http://ov73401nx.bkt.clouddn.com/baiduPlace_1.png">
   
     <link rel="alternative" href="/atom.xml" title="一地鸡毛" type="application/atom+xml">
   
@@ -176,7 +178,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      常州房市分析 - 1
+      常州住房分析 - 1
     </h1>
   
 
@@ -189,7 +191,41 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="从百度地图搜索所有小区"><a href="#从百度地图搜索所有小区" class="headerlink" title="从百度地图搜索所有小区"></a>从百度地图搜索所有小区</h1><h2 id="百度地图placeAPI"><a href="#百度地图placeAPI" class="headerlink" title="百度地图placeAPI"></a>百度地图placeAPI</h2><h2 id="python爬虫"><a href="#python爬虫" class="headerlink" title="python爬虫"></a>python爬虫</h2>
+        <h1 id="从百度地图搜索所有小区"><a href="#从百度地图搜索所有小区" class="headerlink" title="从百度地图搜索所有小区"></a>从百度地图搜索所有小区</h1><ul>
+<li>首先，如果要从安居客、房天下等网站上爬取二手房源，我们得需要有小区名称，从而进行搜索爬取。</li>
+<li>因此，本部分首先利用百度地图的API进行搜索、爬取常州的小区一系列相关信息。</li>
+</ul>
+<h2 id="百度地图placeAPI"><a href="#百度地图placeAPI" class="headerlink" title="百度地图placeAPI"></a>百度地图placeAPI</h2><p>本文使用百度地图所提供的place API，具体参见网址<a href="http://lbsyun.baidu.com/index.php?title=webapi/guide/webservice-placeapi" target="_blank" rel="external">百度地图place AP</a>，具体使用方法为：</p>
+<ul>
+<li>申请密钥（ak） ，作为访问服务的依据；</li>
+<li>按照请求参数说明拼写发送HTTP/HTTPS请求的url，注意需使用第一步申请的ak；</li>
+<li>接收返回的数据（json或xml格式）。</li>
+</ul>
+<p>详细使用方法参考api所提供的参数说明。</p>
+<h2 id="python爬虫"><a href="#python爬虫" class="headerlink" title="python爬虫"></a>python爬虫</h2><p>本文主要需要爬取以下数据：小区、经度、纬度、地址，并从地址中提取相应的行政区，以便后期数据分析时便于处理。</p>
+<p>首先我们具体观察一下返回的网页内容：<a href="http://api.map.baidu.com/place/v2/search?q=%E5%B0%8F%E5%8C%BA&amp;region=%E5%B8%B8%E5%B7%9E&amp;city_limit=true&amp;coord_type=1&amp;output=xml&amp;page_size=20&amp;page_num=10&amp;ak=sBcx4AQLUnm6rHkcOCwCRbWSkNfKBDPh" target="_blank" rel="external">http://api.map.baidu.com/place/v2/search?q=%E5%B0%8F%E5%8C%BA&amp;region=%E5%B8%B8%E5%B7%9E&amp;city_limit=true&amp;coord_type=1&amp;output=xml&amp;page_size=20&amp;page_num=10&amp;ak=sBcx4AQLUnm6rHkcOCwCRbWSkNfKBDPh</a><br><img src="http://ov73401nx.bkt.clouddn.com/baiduPlace_1.png"></p>
+<ul>
+<li>total: 当有返回内容时非0，返回数量为空则为0；</li>
+<li>name：小区名</li>
+<li>lat：经度</li>
+<li>lng：纬度</li>
+<li>address：小区地址，部分可从中提取行政区信息</li>
+</ul>
+<p>OK，以上我们大概了解了网页内的内容，可以进行写代码了，以下仅写出关键点，具体参考源码</p>
+<ul>
+<li>URL网址，注意需要把具体搜索内容进行url编码，具体可使用urllib.parse.quote</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">baseURL = &apos;http://api.map.baidu.com/place/v2/search?&apos;</div><div class="line">url = baseURL + &apos;&amp;query=&apos; + quote(self.query) + &apos;&amp;region=&apos; + quote(self.region) + &apos;&amp;coord_type&apos; + str(self.coord_type) + &apos;&amp;city_limit=&apos; + self.city_limit + &apos;&amp;output&apos; + self.output + &apos;&amp;ak=&apos; + self.ak + &apos;&amp;page_size=&apos; + str(self.page_size) + &apos;&amp;page_num=&apos; + str(pageNo)</div></pre></td></tr></table></figure>
+<ul>
+<li>使用BeautifulSoup进行解析，这个没啥说的，主要就是用BeautifulSoup的find_all(), get_text()</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">nameList = bsObj.find_all(<span class="string">'name'</span>)</div><div class="line">latitudeList = bsObj.find_all(<span class="string">'lat'</span>)</div><div class="line">longitudeList = bsObj.find_all(<span class="string">'lng'</span>)</div><div class="line">addrLists = bsObj.find_all(<span class="string">'address'</span>)</div></pre></td></tr></table></figure>
+<ul>
+<li>余下细节较简单，主要有：利用正则表达式从地址中提取行政区、通过total_status判断url返回内容是否为空、检查存取目录是否存在</li>
+</ul>
+<p>以上即可初步实现小区、经度、纬度、地址、部分行政区的爬取，对于没有相对应行政区的部分直接手工修改。</p>
+<p>既然可以搜小区，当然可以搜其他内容，如公园、小学、中学，具体参考github。</p>
+
       
 
       
@@ -241,7 +277,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">常州房市</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">常州住房</a>
         		</li>
       		
 		</ul>
@@ -420,15 +456,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">matplotlib</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">数据分析</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">常州住房</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">matplotlib</a>
               </li>
              
               <li class="article-tag-list-item">
