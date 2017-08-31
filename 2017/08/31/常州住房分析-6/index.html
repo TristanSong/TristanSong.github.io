@@ -6,18 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: HEXO | 一地鸡毛</title>
+  <title>常州住房分析 - 6 | 一地鸡毛</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Just record &amp; share!">
-<meta property="og:type" content="website">
-<meta property="og:title" content="一地鸡毛">
-<meta property="og:url" content="http://yoursite.com/tags/HEXO/index.html">
+  <meta name="description" content="地理信息显示 首先明确，由于我们只爬取常州的信息，因此我们先查查常州的地理信息范围：北纬31°09′-32°04′、东经119°08′-120°12′。 使用matplotlib的basemap绘制地理信息，以下代码为绘制小区的代码：">
+<meta name="keywords" content="常州住房,数据分析">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常州住房分析 - 6">
+<meta property="og:url" content="http://yoursite.com/2017/08/31/常州住房分析-6/index.html">
 <meta property="og:site_name" content="一地鸡毛">
-<meta property="og:description" content="Just record &amp; share!">
+<meta property="og:description" content="地理信息显示 首先明确，由于我们只爬取常州的信息，因此我们先查查常州的地理信息范围：北纬31°09′-32°04′、东经119°08′-120°12′。 使用matplotlib的basemap绘制地理信息，以下代码为绘制小区的代码：">
 <meta property="og:locale" content="Chinese & English">
+<meta property="og:image" content="http://ov73401nx.bkt.clouddn.com/changzhouFang_1.png">
+<meta property="og:image" content="http://ov73401nx.bkt.clouddn.com/changzhouFang_2.png">
+<meta property="og:image" content="http://ov73401nx.bkt.clouddn.com/changzhouFang_3.png">
+<meta property="og:updated_time" content="2017-08-31T14:39:25.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一地鸡毛">
-<meta name="twitter:description" content="Just record &amp; share!">
+<meta name="twitter:title" content="常州住房分析 - 6">
+<meta name="twitter:description" content="地理信息显示 首先明确，由于我们只爬取常州的信息，因此我们先查查常州的地理信息范围：北纬31°09′-32°04′、东经119°08′-120°12′。 使用matplotlib的basemap绘制地理信息，以下代码为绘制小区的代码：">
+<meta name="twitter:image" content="http://ov73401nx.bkt.clouddn.com/changzhouFang_1.png">
   
     <link rel="alternative" href="/atom.xml" title="一地鸡毛" type="application/atom+xml">
   
@@ -167,136 +173,182 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-常州住房分析-6" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      常州住房分析 - 6
+    </h1>
+  
+
+        
+        <a href="/2017/08/31/常州住房分析-6/" class="archive-article-date">
+  	<time datetime="2017-08-31T14:31:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-31</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="地理信息显示"><a href="#地理信息显示" class="headerlink" title="地理信息显示"></a>地理信息显示</h2><ul>
+<li>首先明确，由于我们只爬取常州的信息，因此我们先查查常州的地理信息范围：北纬31°09′-32°04′、东经119°08′-120°12′。</li>
+<li>使用matplotlib的basemap绘制地理信息，以下代码为绘制小区的代码：</li>
+</ul>
+<a id="more"></a>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> mpl_toolkits.basemap <span class="keyword">import</span> Basemap</div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</div><div class="line"></div><div class="line">plt.figure(figsize=(<span class="number">25</span>, <span class="number">25</span>))</div><div class="line">plt.title(<span class="string">'Changzhou'</span>)</div><div class="line"></div><div class="line">m = Basemap(projection=<span class="string">"mill"</span>,</div><div class="line">            llcrnrlat=<span class="number">31.00</span>,</div><div class="line">            llcrnrlon=<span class="number">119.00</span>,</div><div class="line">            urcrnrlat=<span class="number">32.10</span>,</div><div class="line">            urcrnrlon=<span class="number">120.20</span>,</div><div class="line">            resolution=<span class="string">'l'</span>)</div><div class="line">m.drawcoastlines()</div><div class="line"></div><div class="line"><span class="comment"># 小区</span></div><div class="line">community = pd.read_csv(<span class="string">'./常州_小区.csv'</span>, sep=<span class="string">','</span>, header=<span class="keyword">None</span>)</div><div class="line">community.drop([<span class="number">5</span>], axis=<span class="number">1</span>, inplace=<span class="keyword">True</span>)</div><div class="line"><span class="comment">#m(lon, lat)</span></div><div class="line">lon, lat = m(community[<span class="number">2</span>].tolist(), community[<span class="number">1</span>].tolist())</div><div class="line">m.plot(lon, lat, <span class="string">'c*'</span>)</div><div class="line"></div><div class="line">plt.show()</div></pre></td></tr></table></figure>
+<ul>
+<li>下图为绘制的图，包括：小区、公园、地铁、BRT、小学、初中等。本想增加街道等shapefile，但在<a href="http://ngcc.sbsm.gov.cn/" target="_blank" rel="external">国家基础地理研究中心</a>找不到数据，据说下载还要收费，没办法，先这样看着了！</li>
+</ul>
+<p><img src="http://ov73401nx.bkt.clouddn.com/changzhouFang_1.png"></p>
+<h2 id="小区到附近BRT、地铁、公园距离"><a href="#小区到附近BRT、地铁、公园距离" class="headerlink" title="小区到附近BRT、地铁、公园距离"></a>小区到附近BRT、地铁、公园距离</h2><ul>
+<li>这部分内容相对简单，直接读取之前处理的文件，就只统计了小区到附近位置的距离（筛选掉下属的溧阳、戚墅堰、金坛）。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"># 来看看新北、天宁、钟楼、武进行政区分别到最近BRT、地铁、公园距离</div><div class="line">import matplotlib.pyplot as plt</div><div class="line">import pandas as pd</div><div class="line"></div><div class="line">com_BRT = pd.read_csv(&apos;./小区_BRT.csv&apos;, sep=&apos;,&apos;, header=None)</div><div class="line">cnames = [&apos;community&apos;, &apos;distance&apos;, &apos;station&apos;, &apos;district&apos;]</div><div class="line">com_BRT.columns = cnames</div><div class="line">com_BRT.drop(com_BRT.index[com_BRT.district==&apos;溧阳&apos;], inplace=True)</div><div class="line">com_BRT.drop(com_BRT.index[com_BRT.district==&apos;金坛&apos;], inplace=True)</div><div class="line">com_BRT.drop(com_BRT.index[com_BRT.district==&apos;戚墅堰&apos;], inplace=True)</div><div class="line">print(&apos;小区到BRT平均距离：%.fm&apos;%com_BRT.distance.mean())</div></pre></td></tr></table></figure>
+<ul>
+<li>输出结果:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">小区到BRT平均距离：1170m</div><div class="line">小区到METRO平均距离：1583m</div><div class="line">小区到PARK平均距离：924m</div></pre></td></tr></table></figure>
+<h2 id="数据认识"><a href="#数据认识" class="headerlink" title="数据认识"></a>数据认识</h2><ul>
+<li><strong>对数据的认识非常重要！</strong></li>
+<li><strong>对数据的认识非常重要！</strong></li>
+<li><p><strong>对数据的认识非常重要！</strong></p>
+</li>
+<li><p>首先，我们先读取爬取得二手房源信息</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">import platform</div><div class="line">import pandas as pd</div><div class="line">import numpy as np</div><div class="line">import matplotlib.pyplot as plt</div><div class="line">plt.rcParams[&apos;font.sans-serif&apos;] = [&apos;Monaco YaHei&apos;]</div><div class="line">plt.rcParams[&apos;axes.unicode_minus&apos;] = False</div><div class="line">%matplotlib inline</div><div class="line"></div><div class="line">cnames = [&apos;community_1&apos;, &apos;community_2&apos;, &apos;price&apos;, &apos;livingRoom&apos;, &apos;sittingRoom&apos;, &apos;area&apos;, &apos;buildYear&apos;, </div><div class="line">         &apos;direction&apos;, &apos;floor_1&apos;, &apos;floor_2&apos;, &apos;decoration&apos;, &apos;downPay&apos;, &apos;company&apos;]</div><div class="line">df = pd.read_csv(&apos;./results.csv&apos;, sep=&apos;,&apos;, header=None, encoding=&apos;utf-8&apos;)</div><div class="line">df.drop([13], axis=1, inplace=True)</div><div class="line">df.columns = cnames</div><div class="line">print(df[:10])</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"> community_1    community_2  price  livingRoom  sittingRoom  area buildYear  \</div><div class="line">0        宝龙广场             暂无    145           3            2   133      2012   </div><div class="line">1        宝龙广场          万水美兰城    145           3            2   133      2012   </div><div class="line">2        宝龙广场             暂无    105           3            2    89      2015   </div><div class="line">3        宝龙广场         宝龙城市广场     98           2            2    87      2010   </div><div class="line">4        宝龙广场             暂无    137           3            2   142      2010   </div><div class="line">5        宝龙广场         宝龙城市广场    163           3            2   123      2012   </div><div class="line">6        宝龙广场  梧桐香郡花园西区(玫瑰路)    130           3            2   103      2016   </div><div class="line">7        宝龙广场             暂无    130           3            2   103      2016   </div><div class="line">8        宝龙广场             暂无    144           3            2   144      2010   </div><div class="line">9        宝龙广场         宝龙城市广场    170           3            2   123      2011   </div><div class="line"></div><div class="line">  direction floor_1  floor_2 decoration  downPay company  </div><div class="line">0        南北       中       32         毛坯     43.5      暂无  </div><div class="line">1        南北       中       32         毛坯     43.5    丰业地产  </div><div class="line">2         南       中       32        精装修     31.5      暂无  </div><div class="line">3         南       低       32       豪华装修     29.4    常居地产  </div><div class="line">4         南       低       28       简单装修     41.1      暂无  </div><div class="line">5         东       高       32       中等装修     48.9    常居地产  </div><div class="line">6        南北       低       26         毛坯     39.0    丰业地产  </div><div class="line">7        南北       低       26         毛坯     39.0      暂无  </div><div class="line">8         南       中       28         毛坯     43.2      暂无  </div><div class="line">9         东       中       32        精装修     51.0    常居地产</div></pre></td></tr></table></figure>
+<p>解释一下：<strong>community_1为搜索的小区，community_2为爬取到的房源，可以看到中介在登记房源信息的时候，并不完全按照要求填写，很多并不对应。而且很多并不是中介公司，而是独立经纪人。</strong></p>
+<ul>
+<li>再把小区所属的行政区加入进去，后面可以根据行政区进行统计，看看规律：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"># 把小区所属的区域加入</div><div class="line">df_community = pd.read_csv(&apos;./常州_小区.csv&apos;, header=None, sep=&apos;,&apos;, encoding=&apos;utf-8&apos;)</div><div class="line">df_community.drop([5], axis=1, inplace=True)</div><div class="line">cnames = [&apos;community_1&apos;, &apos;lat&apos;, &apos;lng&apos;, &apos;address&apos;, &apos;district&apos;]</div><div class="line">df_community.columns = cnames</div><div class="line">df = pd.merge(df, df_community, on=&apos;community_1&apos;)</div><div class="line"># 先初步清洗掉同一中介发了多次的房源</div><div class="line">df.drop_duplicates()</div></pre></td></tr></table></figure>
+<ul>
+<li>现在再来看看数据</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># 再看看数据概括</div><div class="line">print(df.describe())</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">              price    livingRoom   sittingRoom          area       floor_2  \</div><div class="line">count  37573.000000  37573.000000  37573.000000  37573.000000  37573.000000   </div><div class="line">mean     135.271472      2.819817      1.886195    117.039736     18.601735   </div><div class="line">std       85.889012      0.941493      0.416681     49.351476     10.426685   </div><div class="line">min        6.000000      1.000000      0.000000     10.000000      0.000000   </div><div class="line">25%       90.000000      2.000000      2.000000     88.000000      7.000000   </div><div class="line">50%      120.000000      3.000000      2.000000    110.000000     18.000000   </div><div class="line">75%      160.000000      3.000000      2.000000    136.000000     30.000000   </div><div class="line">max     2668.000000      9.000000      9.000000   1094.000000     91.000000   </div><div class="line"></div><div class="line">            downPay           lat           lng  </div><div class="line">count  37573.000000  37573.000000  37573.000000  </div><div class="line">mean      40.578351     31.793553    119.959363  </div><div class="line">std       25.768438      0.050638      0.038715  </div><div class="line">min        1.800000     31.379082    119.466727  </div><div class="line">25%       27.000000     31.761443    119.938463  </div><div class="line">50%       36.000000     31.800310    119.964748  </div><div class="line">75%       48.000000     31.824017    119.980606  </div><div class="line">max      800.400000     32.015883    120.120181</div></pre></td></tr></table></figure>
+<p><strong>数据源中存在别墅，如售价最大2668w，卧室9间，客厅9间，面积1094平方，光首付就要800w。存在错误情况：如楼层居然91层，后面会清理。</strong></p>
+<ul>
+<li>通常情况下，小区高度低于100m，约34层，我们先初步清除掉&gt;34层的楼层。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># 来看看楼层91的是什么鬼</div><div class="line">print(df[df.floor_2&gt;34])</div><div class="line"># 存在中介随便填超高的楼层，以及35~44的楼层，真实性暂且不表，清洗掉</div><div class="line">df.drop(df.index[df.floor_2&gt;34], axis=0, inplace=True)</div></pre></td></tr></table></figure>
+<ul>
+<li>再来看看房源按行政区分布</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"># 先来看看所有房源的地区分布</div><div class="line">fig = plt.figure(figsize=(16,6))</div><div class="line"></div><div class="line"># 各区域小区数量分布</div><div class="line"># 想不到武进那么大的地方，居然小区数量居然还没有新北、天宁多</div><div class="line"># 这个没有特别多有用的信息</div><div class="line">ax1 = fig.add_subplot(131)</div><div class="line">df_community.district.value_counts().plot(kind=&apos;bar&apos;)</div><div class="line">ax1.legend([&apos;小区分布by区域&apos;], loc=&apos;best&apos;)</div><div class="line"></div><div class="line"># 各区域小区二手房房源分布</div><div class="line"># 新北小区在数量没有钟楼、天宁多的情况下，居然二手房源最多</div><div class="line"># 也没有特别多有用的信息</div><div class="line">ax2 = fig.add_subplot(132)</div><div class="line">df.district.value_counts().plot(kind=&apos;bar&apos;)</div><div class="line">ax2.legend([&apos;二手房源分布by区域&apos;], loc=&apos;best&apos;)</div><div class="line"></div><div class="line"># 各区域小区房源均价</div><div class="line"># 溧阳房价最高应该是由于样本量过小缘故</div><div class="line"># 只研究天宁、钟楼、新北、武进，去除溧阳、金坛、戚墅堰</div><div class="line">ax3 = fig.add_subplot(133)</div><div class="line">df[&apos;ave_price&apos;] = df[&apos;price&apos;]/df[&apos;area&apos;]</div><div class="line">df_price = df[[&apos;ave_price&apos;, &apos;district&apos;]]</div><div class="line">df_price.groupby(&apos;district&apos;).mean().sort_values(by=[&apos;ave_price&apos;], ascending=False).plot(kind=&apos;bar&apos;, ax=ax3)</div><div class="line">ax3.legend([&apos;房源均价by区域&apos;], loc=&apos;best&apos;)</div><div class="line"></div><div class="line">plt.show()</div></pre></td></tr></table></figure>
+<p><img src="http://ov73401nx.bkt.clouddn.com/changzhouFang_2.png"></p>
+<p><strong>小区数量钟楼区取胜、出售房源总数则以新北取胜。</strong></p>
+<ul>
+<li>再来看看那些大户型的别墅</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"># 再来看看超大户型(300平)</div><div class="line">villa = df[df.area&gt;300]</div><div class="line">fig = plt.figure(figsize=(16, 9))</div><div class="line"></div><div class="line"># 别墅数量分布</div><div class="line">ax1 = fig.add_subplot(121)</div><div class="line">villa.community_1.value_counts().plot(kind=&apos;bar&apos;)</div><div class="line">ax1.legend([&apos;别墅数量by小区&apos;], loc=&apos;best&apos;)</div><div class="line"></div><div class="line"># 别墅按区分布</div><div class="line">ax2 = fig.add_subplot(122)</div><div class="line">villa.district.value_counts().plot(kind=&apos;bar&apos;)</div><div class="line">ax2.legend([u&apos;别墅数量by区域&apos;], loc=&apos;best&apos;)</div><div class="line"></div><div class="line">plt.show()</div></pre></td></tr></table></figure>
+<p><img src="http://ov73401nx.bkt.clouddn.com/changzhouFang_3.png"></p>
+<p><strong>九龙仓国宾1号、星河国际的别墅数量遥遥领先，新北区的别墅数量最多，主要是由于新北刚成为高新区的时候政策很宽松，新建了一批别墅。</strong></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢请我吃糖<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://ov73401nx.bkt.clouddn.com/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://ov73401nx.bkt.clouddn.com/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/25/HEXO网易云音乐/" class="archive-article-date">
-  	<time datetime="2017-08-25T15:34:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/25/HEXO网易云音乐/">HEXO网易云音乐</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HEXO</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">常州住房</a>
         		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/25/HEXO创建博客/" class="archive-article-date">
-  	<time datetime="2017-08-24T16:21:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/25/HEXO创建博客/">HEXO创建博客</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
+      		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HEXO</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据分析</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/24/HEXO主题配置/" class="archive-article-date">
-  	<time datetime="2017-08-24T15:55:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-24</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2017/08/31/常州住房分析-5/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">常州住房分析 - 5</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/24/HEXO主题配置/">HEXO主题配置</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HEXO</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -319,9 +371,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
