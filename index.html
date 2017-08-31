@@ -278,11 +278,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据分析</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据分析</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -363,11 +363,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据分析</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据分析</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -418,7 +418,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/26/常州房市分析-2/">常州房市分析 - 2</a>
+      <a class="article-title" href="/2017/08/26/常州房市分析-2/">常州住房分析 - 2</a>
     </h1>
   
 
@@ -431,7 +431,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="代理IP"><a href="#代理IP" class="headerlink" title="代理IP"></a>代理IP</h1><h2 id="代理爬取"><a href="#代理爬取" class="headerlink" title="代理爬取"></a>代理爬取</h2><h2 id="代理IP验证"><a href="#代理IP验证" class="headerlink" title="代理IP验证"></a>代理IP验证</h2>
+        <h1 id="代理IP"><a href="#代理IP" class="headerlink" title="代理IP"></a>代理IP</h1><p><strong>并不是特别成功，通常没几个代理ip可用，作为一个有responsible crawler，还是慢一点，不要给网站服务器过大负担。</strong></p>
+<p>在准备爬取二手房源之前，为了防止同一ip多次爬取被网站封掉的情况，可以设置代理ip。具体在爬虫时使用方法如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">import urllib.request</div><div class="line">proxy_support = urllib.request.ProxyHandler(&#123;&apos;http&apos;:&apos;http://XX.XX.XX.XX:XXXX&apos;&#125;)</div><div class="line">opener = urllib.request.build_opener(proxy_support)</div><div class="line">urllib.request.install(opener)</div></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2017/08/26/常州房市分析-2/#more">more >></a>
+        
       
 
       
@@ -444,15 +449,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据分析</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">常州房市</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">代理IP</a>
         		</li>
       		
 		</ul>
@@ -538,11 +539,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据分析</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据分析</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -939,15 +940,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">代理IP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">matplotlib</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">数据分析</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -6,20 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>常州房市分析 - 2 | 一地鸡毛</title>
+  <title>常州住房分析 - 2 | 一地鸡毛</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="代理IP代理爬取代理IP验证">
-<meta name="keywords" content="数据分析,爬虫,常州房市">
+  <meta name="description" content="代理IP并不是特别成功，通常没几个代理ip可用，作为一个有responsible crawler，还是慢一点，不要给网站服务器过大负担。 在准备爬取二手房源之前，为了防止同一ip多次爬取被网站封掉的情况，可以设置代理ip。具体在爬虫时使用方法如下： 1234import urllib.requestproxy_support = urllib.request.ProxyHandler(&amp;#123;">
+<meta name="keywords" content="爬虫,代理IP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="常州房市分析 - 2">
+<meta property="og:title" content="常州住房分析 - 2">
 <meta property="og:url" content="http://yoursite.com/2017/08/26/常州房市分析-2/index.html">
 <meta property="og:site_name" content="一地鸡毛">
-<meta property="og:description" content="代理IP代理爬取代理IP验证">
+<meta property="og:description" content="代理IP并不是特别成功，通常没几个代理ip可用，作为一个有responsible crawler，还是慢一点，不要给网站服务器过大负担。 在准备爬取二手房源之前，为了防止同一ip多次爬取被网站封掉的情况，可以设置代理ip。具体在爬虫时使用方法如下： 1234import urllib.requestproxy_support = urllib.request.ProxyHandler(&amp;#123;">
 <meta property="og:locale" content="Chinese & English">
-<meta property="og:updated_time" content="2017-08-26T08:41:35.000Z">
+<meta property="og:image" content="http://ov73401nx.bkt.clouddn.com/ip_1.png">
+<meta property="og:updated_time" content="2017-08-31T13:42:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="常州房市分析 - 2">
-<meta name="twitter:description" content="代理IP代理爬取代理IP验证">
+<meta name="twitter:title" content="常州住房分析 - 2">
+<meta name="twitter:description" content="代理IP并不是特别成功，通常没几个代理ip可用，作为一个有responsible crawler，还是慢一点，不要给网站服务器过大负担。 在准备爬取二手房源之前，为了防止同一ip多次爬取被网站封掉的情况，可以设置代理ip。具体在爬虫时使用方法如下： 1234import urllib.requestproxy_support = urllib.request.ProxyHandler(&amp;#123;">
+<meta name="twitter:image" content="http://ov73401nx.bkt.clouddn.com/ip_1.png">
   
     <link rel="alternative" href="/atom.xml" title="一地鸡毛" type="application/atom+xml">
   
@@ -176,7 +178,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      常州房市分析 - 2
+      常州住房分析 - 2
     </h1>
   
 
@@ -189,7 +191,27 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="代理IP"><a href="#代理IP" class="headerlink" title="代理IP"></a>代理IP</h1><h2 id="代理爬取"><a href="#代理爬取" class="headerlink" title="代理爬取"></a>代理爬取</h2><h2 id="代理IP验证"><a href="#代理IP验证" class="headerlink" title="代理IP验证"></a>代理IP验证</h2>
+        <h1 id="代理IP"><a href="#代理IP" class="headerlink" title="代理IP"></a>代理IP</h1><p><strong>并不是特别成功，通常没几个代理ip可用，作为一个有responsible crawler，还是慢一点，不要给网站服务器过大负担。</strong></p>
+<p>在准备爬取二手房源之前，为了防止同一ip多次爬取被网站封掉的情况，可以设置代理ip。具体在爬虫时使用方法如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">import urllib.request</div><div class="line">proxy_support = urllib.request.ProxyHandler(&#123;&apos;http&apos;:&apos;http://XX.XX.XX.XX:XXXX&apos;&#125;)</div><div class="line">opener = urllib.request.build_opener(proxy_support)</div><div class="line">urllib.request.install(opener)</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="代理爬取"><a href="#代理爬取" class="headerlink" title="代理爬取"></a>代理爬取</h2><p>网上有很多免费的代理ip，比如<a href="http://www.xicidaili.com/nn/" target="_blank" rel="external">西刺代理</a>。</p>
+<ul>
+<li>首先，我们先观察一下网页内容：进入开发者模式，可以观察到如下内容：</li>
+</ul>
+<p><img src="http://ov73401nx.bkt.clouddn.com/ip_1.png" \=""></p>
+<ul>
+<li>我们主要爬取ip、端口、类型，而所有数据都html的表格内，具体使用BeautifulSoup的findAll()及contents()</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">tds = ip.findAll(&apos;td&apos;)</div><div class="line">ip_temp = &#123;&#125;</div><div class="line">ip_temp[&apos;addr&apos;] = tds[1].contents[0]</div><div class="line">ip_temp[&apos;port&apos;] = tds[2].contents[0]</div><div class="line">ip_temp[&apos;type&apos;] = tds[5].contents[0]</div></pre></td></tr></table></figure>
+<ul>
+<li>以上即可获取需要的代理ip。</li>
+</ul>
+<h2 id="代理IP验证"><a href="#代理IP验证" class="headerlink" title="代理IP验证"></a>代理IP验证</h2><p>但爬到的很多代理ip压根没用，通常免费的ip中能有几个有用的就谢天谢地了，否则人家怎么收费呢。所以我们需要对ip进行验证。</p>
+<p>具体很简单，即利用ip检测网站，检查我们的代理ip是否可以打开网页，具体见代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">socket.setdefaulttimeout(3)</div><div class="line">url =  &apos;http://ip.chinaz.com/getip.aspx&apos;</div><div class="line">proxy_support = urllib.request.ProxyHandler(ip_temp)</div><div class="line">opener = urllib.request.build_opener(proxy_support)</div><div class="line">urllib.request.install_opener(opener)</div><div class="line">try:</div><div class="line">   html = urlopen(url)</div><div class="line">   if html:</div><div class="line">      return True</div><div class="line">   else:</div><div class="line">      return False</div><div class="line">except Exception as e:</div><div class="line">   return False</div></pre></td></tr></table></figure>
+<p>以上，先爬取ip并验证，即可获得免费的代理ip。具体参见<a href="">github</a>。</p>
+
       
 
       
@@ -233,15 +255,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据分析</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">常州房市</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">代理IP</a>
         		</li>
       		
 		</ul>
@@ -420,15 +438,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">代理IP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">matplotlib</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">数据分析</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
               </li>
              
               <li class="article-tag-list-item">
