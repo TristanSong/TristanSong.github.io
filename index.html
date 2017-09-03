@@ -194,17 +194,10 @@ var _hmt = _hmt || [];
       
         <h2 id="HEXO博客添加域名"><a href="#HEXO博客添加域名" class="headerlink" title="HEXO博客添加域名"></a>HEXO博客添加域名</h2><ul>
 <li><a href="https://wanwang.aliyun.com/?utm_medium=text&amp;utm_source=bdbrandww&amp;utm_campaign=bdbrand&amp;utm_content=se_103066" target="_blank" rel="external">万网</a>购买域名。随便花了6块钱买了个.club的域名。</li>
-<li>域名解析:域名与网站-云解析DNS-解析</li>
 </ul>
-<p><img src="http://ov73401nx.bkt.clouddn.com/hexo_5.png"></p>
-<ul>
-<li>添加解析:点击添加解析，记录类型选A或CNAME，A记录的记录值就是ip地址，github(官方文档)提供了两个IP地址，192.30.252.153和192.30.252.154，这两个IP地址为github的服务器地址，两个都要填上，解析记录设置两个www和@，线路就默认就行了，CNAME记录值填你的github博客网址。如我的是tristansong.github.io。</li>
-</ul>
-<p><img src="http://ov73401nx.bkt.clouddn.com/hexo_6.png"></p>
-<ul>
-<li>最后一步：这些全部设置完成后，此时你并不能要申请的域名访问你的博客。接着你需要做的是在hexo根目录的source文件夹里创建CNAME文件，不带任何后缀，里面添加你的域名信息，如：tristansong.club。实践证明如果此时你填写的是www.tristansong.club那么以后你只能用www.tristansong.club访问，而如果你填写的是tristansong.club。那么用www.tristansong.club和tristansong.club访问都是可以的。重新清理hexo,并发布即可用新的域名访问。</li>
-</ul>
-
+        
+          <a class="article-more-a" href="/2017/09/03/HEXO添加域名/#more">more >></a>
+        
       
 
       
@@ -281,10 +274,9 @@ var _hmt = _hmt || [];
 <li>效果如图</li>
 </ul>
 <p><img src="http://ov73401nx.bkt.clouddn.com/hexo_4.png"></p>
-<ul>
-<li>在themes\yilia\layout_partial下的footer.ejs中加入如下代码即可</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;footer id=&quot;footer&quot;&gt;</div><div class="line">  </div><div class="line">  &lt;script async src=&quot;//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;</div><div class="line">  &lt;/script&gt;</div><div class="line">  &lt;span id=&quot;busuanzi_container_site_pv&quot;&gt;</div><div class="line">    本站总访问量&lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt;次</div><div class="line">  &lt;/span&gt;</div><div class="line">  &lt;span id=&quot;busuanzi_container_site_uv&quot;&gt;</div><div class="line">    总访客数&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;人次</div><div class="line">  &lt;/span&gt;</div></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2017/09/03/HEXO网站访问统计显示/#more">more >></a>
+        
       
 
       
@@ -361,17 +353,9 @@ var _hmt = _hmt || [];
 <ul>
 <li>打开./theme/yilia/_config.yml，设置disqus: true, 并在下面添加disqus_shortname: xxx, xxx为disqus网站上配置的site的shortname,下面配置disqus。</li>
 </ul>
-<p>disqus配置</p>
-<ul>
-<li>注册<a href="https://blog.disqus.com/" target="_blank" rel="external">Disqus</a>,Disqus网址，注册完账号登录后点击右上角Home跳转到主页，然后点击齿轮按钮选择Add Dusqus To Site，跳转后拉到页面最下方，点GET STARTED，再次跳转后选择I want to install Disqus on my site，然后在新页面中填写你的website name、type和language，如下图：</li>
-</ul>
-<p><img src="http://ov73401nx.bkt.clouddn.com/hexo_2.png"></p>
-<p>创建成功后，在新页面点击Install Disqus，Platform选择为Universal Code，拉到页面最下面点击按钮即可。然后点击Configure Disqus，将Website Name改为你想要的名称，我的为ErryLee，URL设置为你的Github page地址，然后完成。</p>
-<p><img src="http://ov73401nx.bkt.clouddn.com/hexo_3.png"></p>
-<ul>
-<li>最后，hexo clean &amp;&amp; hexo g &amp;&amp; hexo d。</li>
-</ul>
-
+        
+          <a class="article-more-a" href="/2017/09/03/HEXO添加Disqus评论/#more">more >></a>
+        
       
 
       
