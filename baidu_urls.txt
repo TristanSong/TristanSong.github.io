@@ -1,3 +1,4 @@
+http://tristansong.club/HEXO网站SEO优化.html
 http://tristansong.club/HEXO添加域名.html
 http://tristansong.club/HEXO网站访问统计显示.html
 http://tristansong.club/HEXO添加Disqus评论.html
@@ -7,4 +8,3 @@ http://tristansong.club/SPC数据可视化-2.html
 http://tristansong.club/SPC数据可视化-1.html
 http://tristansong.club/常州住房分析-6.html
 http://tristansong.club/常州住房分析-5.html
-http://tristansong.club/matplotlib中文乱码.html
