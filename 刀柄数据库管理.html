@@ -6,20 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://tristansong.club">
-  <title>HEXO主题配置 | 一地鸡毛</title>
+  <title>刀柄数据库管理 | 一地鸡毛</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="安装主题: yilia主题安装Mac Terminal 切换: cd Documents/Tristan.Blog 下载: git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia">
-<meta name="keywords" content="HEXO">
+  <meta name="description" content="说起来，这个应该是我做的第一个GUI程序，主要有三个页面：登陆、管理员、员工。    主要框架  员工登陆：扫描ID卡，实现登陆 管理员登陆：用户名密码登录 员工权限：查询、借刀、还刀 管理员权限：查询、借刀、还刀、刀柄信息管理、员工信息管理 通过蓝牙控制刀具库的开关  具体实现下面主要讲讲使用tkinter实现具体三个页面的实现，其他的则为数据库创建、查询等问题，不一一讲述。  startPag">
+<meta name="keywords" content="tkinter,mysql,刀柄管理">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HEXO主题配置">
-<meta property="og:url" content="http://tristansong.club/HEXO主题配置.html">
+<meta property="og:title" content="刀柄数据库管理">
+<meta property="og:url" content="http://tristansong.club/刀柄数据库管理.html">
 <meta property="og:site_name" content="一地鸡毛">
-<meta property="og:description" content="安装主题: yilia主题安装Mac Terminal 切换: cd Documents/Tristan.Blog 下载: git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia">
+<meta property="og:description" content="说起来，这个应该是我做的第一个GUI程序，主要有三个页面：登陆、管理员、员工。    主要框架  员工登陆：扫描ID卡，实现登陆 管理员登陆：用户名密码登录 员工权限：查询、借刀、还刀 管理员权限：查询、借刀、还刀、刀柄信息管理、员工信息管理 通过蓝牙控制刀具库的开关  具体实现下面主要讲讲使用tkinter实现具体三个页面的实现，其他的则为数据库创建、查询等问题，不一一讲述。  startPag">
 <meta property="og:locale" content="Chinese & English">
-<meta property="og:updated_time" content="2017-08-26T08:14:36.000Z">
+<meta property="og:image" content="http://ov73401nx.bkt.clouddn.com/toolholder_1.png">
+<meta property="og:image" content="http://ov73401nx.bkt.clouddn.com/toolholder_2.png">
+<meta property="og:image" content="http://ov73401nx.bkt.clouddn.com/toolholder_3.png">
+<meta property="og:image" content="http://ov73401nx.bkt.clouddn.com/toolholder_4.png">
+<meta property="og:updated_time" content="2017-09-03T09:38:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HEXO主题配置">
-<meta name="twitter:description" content="安装主题: yilia主题安装Mac Terminal 切换: cd Documents/Tristan.Blog 下载: git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia">
+<meta name="twitter:title" content="刀柄数据库管理">
+<meta name="twitter:description" content="说起来，这个应该是我做的第一个GUI程序，主要有三个页面：登陆、管理员、员工。    主要框架  员工登陆：扫描ID卡，实现登陆 管理员登陆：用户名密码登录 员工权限：查询、借刀、还刀 管理员权限：查询、借刀、还刀、刀柄信息管理、员工信息管理 通过蓝牙控制刀具库的开关  具体实现下面主要讲讲使用tkinter实现具体三个页面的实现，其他的则为数据库创建、查询等问题，不一一讲述。  startPag">
+<meta name="twitter:image" content="http://ov73401nx.bkt.clouddn.com/toolholder_1.png">
   
     <link rel="alternative" href="/atom.xml" title="一地鸡毛" type="application/atom+xml">
   
@@ -178,39 +183,59 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-HEXO主题配置" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-刀柄数据库管理" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      HEXO主题配置
+      刀柄数据库管理
     </h1>
   
 
         
-        <a href="/HEXO主题配置.html" class="archive-article-date">
-  	<time datetime="2017-08-24T15:55:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-24</time>
+        <a href="/刀柄数据库管理.html" class="archive-article-date">
+  	<time datetime="2017-09-03T08:55:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-03</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="安装主题-yilia"><a href="#安装主题-yilia" class="headerlink" title="安装主题: yilia"></a>安装主题: <a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">yilia</a></h1><h2 id="主题安装"><a href="#主题安装" class="headerlink" title="主题安装"></a>主题安装</h2><h3 id="Mac-Terminal"><a href="#Mac-Terminal" class="headerlink" title="Mac Terminal"></a>Mac Terminal</h3><ul>
-<li>切换: cd Documents/Tristan.Blog</li>
-<li>下载: git clone <a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="external">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia<a id="more"></a></li>
-<li>更改: sublime text打开_config.yml，将theme修改为theme: yilia</li>
-<li>部署: npm install hexo-deployer-git –save</li>
-<li>发布: hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</li>
+        <p>说起来，这个应该是我做的第一个GUI程序，主要有三个页面：登陆、管理员、员工。</p>
+<p><img src="http://ov73401nx.bkt.clouddn.com/toolholder_1.png"></p>
+<p><img src="http://ov73401nx.bkt.clouddn.com/toolholder_2.png"></p>
+<p><img src="http://ov73401nx.bkt.clouddn.com/toolholder_3.png"></p>
+<h2 id="主要框架"><a href="#主要框架" class="headerlink" title="主要框架"></a>主要框架</h2><p><img src="http://ov73401nx.bkt.clouddn.com/toolholder_4.png"></p>
+<ul>
+<li>员工登陆：扫描ID卡，实现登陆</li>
+<li>管理员登陆：用户名密码登录</li>
+<li>员工权限：查询、借刀、还刀</li>
+<li>管理员权限：查询、借刀、还刀、刀柄信息管理、员工信息管理</li>
+<li>通过蓝牙控制刀具库的开关</li>
 </ul>
-<h2 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h2><ul>
-<li>切换: cd themes/yilia</li>
-<li>更改: sublime text打开_config.yml，具体更改内容写的很详细，如更改分类、友链、联系方式、头像等，目前暂时没有做访问统计、评论功能。</li>
-<li>部署: 配置完成后，cd ..退回到Tristan.Blog根目录，按照之前的部署(npm install hexo-deployer-git –save)、发布(hexo clean &amp;&amp; hexo g &amp;&amp; hexo d)即可完成!</li>
+<h2 id="具体实现"><a href="#具体实现" class="headerlink" title="具体实现"></a>具体实现</h2><p>下面主要讲讲使用tkinter实现具体三个页面的实现，其他的则为数据库创建、查询等问题，不一一讲述。</p>
+<ul>
+<li>startPage: Toolholder</li>
 </ul>
-<p>详细内容可以参考<a href="http://www.jianshu.com/p/1fb65c61fa4a" target="_blank" rel="external">像少年啦飞驰__</a></p>
+<p>首先需要创建初始登录界面，从而去访问adminPage, workerPage。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Toolholder</span><span class="params">(tk.Tk)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, *args, **kwargs)</span>:</span></div><div class="line">        tk.Tk.__init__(self, *args, **kwargs)</div><div class="line">        <span class="comment"># ico format can show correctly. When on Mac, the "default" need to be "bitmap", also "self" to "tk.Tk"</span></div><div class="line">        tk.Tk.iconbitmap(self, bitmap=<span class="string">"client_icon.ico"</span>)</div><div class="line">        self.geometry(<span class="string">"600x320"</span>)</div><div class="line">        self.resizable(<span class="keyword">False</span>, <span class="keyword">False</span>)</div><div class="line">        self.wm_title(<span class="string">"POLC QM&amp;CNC刀柄管理系统"</span>)</div><div class="line"></div><div class="line">        menu_bar = tk.Menu(self, tearoff=<span class="number">0</span>)</div><div class="line">        self.config(menu=menu_bar)</div><div class="line"></div><div class="line">        file_menu = tk.Menu(menu_bar, tearoff=<span class="number">0</span>)</div><div class="line">        file_menu.add_command(label=<span class="string">"管理员"</span>, command=<span class="keyword">lambda</span>: self.showFrame(AdminLogin))</div><div class="line">        file_menu.add_command(label=<span class="string">"员工"</span>, command=<span class="keyword">lambda</span> :self.showFrame(WorkerLogin))</div><div class="line">        file_menu.add_separator()</div><div class="line">        file_menu.add_command(label=<span class="string">"退出"</span>, command=<span class="keyword">lambda</span>: tk.Tk.destroy(self))</div><div class="line">        menu_bar.add_cascade(label=<span class="string">"文件"</span>, menu=file_menu)</div><div class="line"></div><div class="line">        help_menu = tk.Menu(menu_bar, tearoff=<span class="number">0</span>)</div><div class="line">        help_menu.add_command(label=<span class="string">"帮助"</span>, command=<span class="keyword">lambda</span> :myThread(popupMsg, (<span class="string">"Not support yet!"</span>, )))</div><div class="line">        help_menu.add_separator()</div><div class="line">        help_menu.add_command(label=<span class="string">"版本"</span>, command=<span class="keyword">lambda</span> :myThread(popupMsg, (<span class="string">"Version: 0.1"</span>, )))</div><div class="line">        help_menu.add_command(label=<span class="string">"关于"</span>, command=<span class="keyword">lambda</span> :myThread(popupMsg, (<span class="string">"Author: Tristan Song/宋寒"</span>, )))</div><div class="line">        menu_bar.add_cascade(label=<span class="string">"帮助"</span>, menu=help_menu)</div><div class="line"></div><div class="line">        container = tk.Frame(self)</div><div class="line">        container.pack(side=<span class="string">"top"</span>, fill=<span class="string">"both"</span>, expand=<span class="keyword">True</span>)</div><div class="line">        container.grid_rowconfigure(<span class="number">0</span>, weight=<span class="number">1</span>)</div><div class="line">        container.grid_columnconfigure(<span class="number">0</span>, weight=<span class="number">1</span>)</div><div class="line"></div><div class="line">        self.frames = &#123;&#125;</div><div class="line">        <span class="keyword">for</span> F <span class="keyword">in</span> (WorkerLogin, AdminLogin, WorkerPage, AdminPage):</div><div class="line">            frame = F(container, self)</div><div class="line">            self.frames[F] = frame</div><div class="line">            frame.grid(row=<span class="number">0</span>, column=<span class="number">0</span>, sticky=<span class="string">"nsew"</span>)</div><div class="line">        self.showFrame(WorkerLogin)</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">showFrame</span><span class="params">(self, cont)</span>:</span></div><div class="line">        frame = self.frames[cont]</div><div class="line">        frame.tkraise()</div></pre></td></tr></table></figure>
+<p>这儿的关键在于：先创建所有的页面后，通过showFrame函数实现将页面调用到最上面显示。</p>
+<ul>
+<li>workerPage: workerLogin &amp; workerPage, adminPage: adminLogin &amp; adminPage</li>
+</ul>
+<p>通过上面的showframe函数将页面显示到最上面后，这两个页面主要就是具体的函数调用，主要有：</p>
+<pre><code>- addWorker()
+- delWorker()
+- addToolholder()
+- delToolholder()
+- searchToolholder()
+- lendTool()
+- returnTool()
+</code></pre><p>由于python线程问题，需要为程序增加threading，否则调用数据库后只有主线程情况下，无法关闭，数据库调用出现问题。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">def myThread(Target, Args=()):</div><div class="line">    th = threading.Thread(target=Target, args=Args)</div><div class="line">    th.setDaemon(True)</div><div class="line">    th.start()</div></pre></td></tr></table></figure>
+<p>以上，即为程序的主要部分，具体代码请参考<a href="">github</a>。当然也可以参考<a href="https://pythonprogramming.net/tkinter-depth-tutorial-making-actual-program/" target="_blank" rel="external">视频教程</a>。之前还做了差不多方法的SPC可视化程序，使用了matplotlib的animation实现，后来改进成<a href="http://tristansong.club/SPC%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96-2.html">echarts版本</a>，也可以<a href="">看一下</a>。</p>
 
       
 
@@ -255,7 +280,15 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HEXO</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">tkinter</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">刀柄管理</a>
         		</li>
       		
 		</ul>
@@ -274,15 +307,11 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/HEXO创建博客.html" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          HEXO创建博客
-        
-      </div>
-    </a>
   
+    <a href="/HEXO网站SEO优化.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">HEXO网站SEO优化</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
