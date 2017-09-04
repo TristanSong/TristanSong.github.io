@@ -20,7 +20,7 @@
 <meta property="og:image" content="http://ov73401nx.bkt.clouddn.com/toolholder_2.png">
 <meta property="og:image" content="http://ov73401nx.bkt.clouddn.com/toolholder_3.png">
 <meta property="og:image" content="http://ov73401nx.bkt.clouddn.com/toolholder_4.png">
-<meta property="og:updated_time" content="2017-09-03T09:40:12.000Z">
+<meta property="og:updated_time" content="2017-09-04T16:09:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="刀柄数据库管理">
 <meta name="twitter:description" content="说起来，这个应该是我做的第一个GUI程序，主要有三个页面：登陆、管理员、员工。">
@@ -236,7 +236,7 @@ var _hmt = _hmt || [];
 - returnTool()
 </code></pre><p>由于python线程问题，需要为程序增加threading，否则调用数据库后只有主线程情况下，无法关闭，数据库调用出现问题。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">def myThread(Target, Args=()):</div><div class="line">    th = threading.Thread(target=Target, args=Args)</div><div class="line">    th.setDaemon(True)</div><div class="line">    th.start()</div></pre></td></tr></table></figure>
-<p>以上，即为程序的主要部分，具体代码请参考<a href="">github</a>。当然也可以参考<a href="https://pythonprogramming.net/tkinter-depth-tutorial-making-actual-program/" target="_blank" rel="external">视频教程</a>。之前还做了差不多方法的SPC可视化程序，使用了matplotlib的animation实现，后来改进成<a href="http://tristansong.club/SPC%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96-2.html">echarts版本</a>，也可以<a href="">看一下</a>。</p>
+<p>以上，即为程序的主要部分，具体代码请参考<a href="https://github.com/TristanSong/Github/tree/master/Projects/Toolholder" target="_blank" rel="external">github</a>。当然也可以参考<a href="https://pythonprogramming.net/tkinter-depth-tutorial-making-actual-program/" target="_blank" rel="external">视频教程</a>。之前还做了差不多方法的SPC可视化程序，使用了matplotlib的animation实现，后来改进成<a href="http://tristansong.club/SPC%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96-2.html">echarts版本</a>，也可以看一下。</p>
 
       
 
@@ -513,10 +513,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">matplotlib</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">刀柄管理</a>
               </li>
              
@@ -526,6 +522,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">常州住房</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">matplotlib</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -23,7 +23,7 @@
 <meta property="og:image" content="http://ov73401nx.bkt.clouddn.com/changzhouFang_5.png">
 <meta property="og:image" content="http://ov73401nx.bkt.clouddn.com/changzhouFang_6.png">
 <meta property="og:image" content="http://ov73401nx.bkt.clouddn.com/dataMining.process.png">
-<meta property="og:updated_time" content="2017-09-02T06:14:18.000Z">
+<meta property="og:updated_time" content="2017-09-04T16:04:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="常州住房分析 - 6">
 <meta name="twitter:description" content="地理信息显示 首先明确，由于我们只爬取常州的信息，因此我们先查查常州的地理信息范围：北纬31°09′-32°04′、东经119°08′-120°12′。 使用matplotlib的basemap绘制地理信息，以下代码为绘制小区的代码：">
@@ -310,7 +310,7 @@ var _hmt = _hmt || [];
 <li>最后一步：训练、预测</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"># 划分训练集、测试集</div><div class="line">from sklearn.cross_validation import train_test_split</div><div class="line">from sklearn import linear_model</div><div class="line"></div><div class="line">df_np = df.as_matrix()</div><div class="line">df_data = df_np[:, 1:]</div><div class="line">df_target = df_np[:, 0]</div><div class="line">X_train, X_test, y_train, y_test = train_test_split(df_data, df_target, test_size=0.2, random_state=0)</div><div class="line"></div><div class="line">clf = linear_model.LogisticRegression(C=1.0, penalty=&apos;l1&apos;, tol=1e-6)</div><div class="line">clf.fit(X_train, y_train)</div><div class="line"></div><div class="line">predictions = clf.predict(X_test)</div><div class="line">results = pd.DataFrame(&#123;&apos;prediction&apos;:predictions, &apos;real&apos;: y_test, &apos;diff&apos;:predictions-y_test, &apos;diff_per&apos;:(predictions-y_test)/y_test&#125;)</div><div class="line">results.to_csv(&apos;./lr_predictions.csv&apos;, index=False)</div></pre></td></tr></table></figure>
-<p>OK，做到目前，初步完成了爬虫、对数据分析、挖掘，但从最后的结果来看还不太好，主要在以下提高：</p>
+<p>OK，做到目前，初步完成了爬虫、对数据分析、挖掘，详细内容见<a href="https://github.com/TristanSong/Github/tree/master/Projects/changzhouFang" target="_blank" rel="external">github</a>。但从最后的结果来看还不太好，主要在以下提高：</p>
 <ul>
 <li>增加数据维度：比如学区信息，仅仅放了5个小学1个中学，还有其他好学校，再或者如政府机构、商圈等</li>
 <li>数据处理方式：有些数据直接归一化了，如直接把&gt;6层认为1类，而&lt;6层可能为小别墅，价格差距就比较大了</li>
@@ -599,10 +599,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">matplotlib</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">刀柄管理</a>
               </li>
              
@@ -612,6 +608,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">常州住房</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">matplotlib</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -17,7 +17,7 @@
 <meta property="og:description" content="小区到BRT、地铁、公园、学区等信息处理拿到以上数据，我们需要对数据进行处理，比如利用将GPS数据计算距离，或者小区的学区归属。 学区这年头，买房子不仅交通位置重要，学区也极其重要，常州最近的学区房暴涨，因此我们去常州教育局网站搜索一下学区信息。">
 <meta property="og:locale" content="Chinese & English">
 <meta property="og:image" content="http://ov73401nx.bkt.clouddn.com/school_1.png">
-<meta property="og:updated_time" content="2017-08-31T14:11:56.000Z">
+<meta property="og:updated_time" content="2017-09-04T16:03:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="常州住房分析 - 5">
 <meta name="twitter:description" content="小区到BRT、地铁、公园、学区等信息处理拿到以上数据，我们需要对数据进行处理，比如利用将GPS数据计算距离，或者小区的学区归属。 学区这年头，买房子不仅交通位置重要，学区也极其重要，常州最近的学区房暴涨，因此我们去常州教育局网站搜索一下学区信息。">
@@ -206,11 +206,11 @@ var _hmt = _hmt || [];
 <p>但网页实在是烂，让你们随意感受下，还能再懒点吗？没办法只能自己搜了，大概搜了下常州排名前几的公办小学中学对应的小区。</p>
 <p><img src="http://ov73401nx.bkt.clouddn.com/school_1.png"></p>
 <h2 id="小区到附近BRT、地铁、公园距离"><a href="#小区到附近BRT、地铁、公园距离" class="headerlink" title="小区到附近BRT、地铁、公园距离"></a>小区到附近BRT、地铁、公园距离</h2><ul>
-<li>由于我们的小区、BRT、地铁、公园都爬取了对应的坐标，直接写个脚本得到小区到最近的BRT、地铁、公园距离，具体参考代码<a href="">gps_distance.py</a>。生成小区_BRT.csv, 小区_METRO.csv, 小区_PARK.csv。</li>
+<li>由于我们的小区、BRT、地铁、公园都爬取了对应的坐标，直接写个脚本得到小区到最近的BRT、地铁、公园距离，具体参考代码<a href="https://github.com/TristanSong/Github/blob/master/Projects/changzhouFang/distances/gps_distance.py" target="_blank" rel="external">gps_distance.py</a>。生成小区_BRT.csv, 小区_METRO.csv, 小区_PARK.csv。</li>
 </ul>
 <h2 id="小区对应的学区"><a href="#小区对应的学区" class="headerlink" title="小区对应的学区"></a>小区对应的学区</h2><p>有了小区及学区，在数据挖掘概念中，一个非常重要的数据处理方式：特征因子化，比如我们有个数据表，其中一列性别对应为：‘男’/‘女’， 可以处理成两列‘性别-男’和‘性别-女’：对应部分分别为1或0，便于数据处理。本项目同理：</p>
 <ul>
-<li>分别按照小学，对应的小区为1，不对应小区为0，具体参见代码<a href="">school_community.py</a>。</li>
+<li>分别按照小学，对应的小区为1，不对应小区为0，具体参见代码<a href="https://github.com/TristanSong/Github/blob/master/Projects/changzhouFang/distances/school_community.py" target="_blank" rel="external">school_community.py</a>。</li>
 </ul>
 <p>以上数据获取及初步处理已完成，接下来我们会在jupyter notebook进行分析及数据挖掘。</p>
 
@@ -490,10 +490,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">matplotlib</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">刀柄管理</a>
               </li>
              
@@ -503,6 +499,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">常州住房</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">matplotlib</a>
               </li>
              
               <li class="article-tag-list-item">

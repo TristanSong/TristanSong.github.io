@@ -17,7 +17,7 @@
 <meta property="og:description" content="代理IP并不是特别成功，通常没几个代理ip可用，作为一个有responsible crawler，还是慢一点，不要给网站服务器过大负担。 在准备爬取二手房源之前，为了防止同一ip多次爬取被网站封掉的情况，可以设置代理ip。具体在爬虫时使用方法如下： 1234import urllib.requestproxy_support = urllib.request.ProxyHandler(&amp;#123;">
 <meta property="og:locale" content="Chinese & English">
 <meta property="og:image" content="http://ov73401nx.bkt.clouddn.com/ip_1.png">
-<meta property="og:updated_time" content="2017-08-31T14:06:19.000Z">
+<meta property="og:updated_time" content="2017-09-04T15:59:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="常州住房分析 - 2">
 <meta name="twitter:description" content="代理IP并不是特别成功，通常没几个代理ip可用，作为一个有responsible crawler，还是慢一点，不要给网站服务器过大负担。 在准备爬取二手房源之前，为了防止同一ip多次爬取被网站封掉的情况，可以设置代理ip。具体在爬虫时使用方法如下： 1234import urllib.requestproxy_support = urllib.request.ProxyHandler(&amp;#123;">
@@ -219,7 +219,7 @@ var _hmt = _hmt || [];
 <h2 id="代理IP验证"><a href="#代理IP验证" class="headerlink" title="代理IP验证"></a>代理IP验证</h2><p>但爬到的很多代理ip压根没用，通常免费的ip中能有几个有用的就谢天谢地了，否则人家怎么收费呢。所以我们需要对ip进行验证。</p>
 <p>具体很简单，即利用ip检测网站，检查我们的代理ip是否可以打开网页，具体见代码</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">socket.setdefaulttimeout(3)</div><div class="line">url =  &apos;http://ip.chinaz.com/getip.aspx&apos;</div><div class="line">proxy_support = urllib.request.ProxyHandler(ip_temp)</div><div class="line">opener = urllib.request.build_opener(proxy_support)</div><div class="line">urllib.request.install_opener(opener)</div><div class="line">try:</div><div class="line">   html = urlopen(url)</div><div class="line">   if html:</div><div class="line">      return True</div><div class="line">   else:</div><div class="line">      return False</div><div class="line">except Exception as e:</div><div class="line">   return False</div></pre></td></tr></table></figure>
-<p>以上，先爬取ip并验证，即可获得免费的代理ip。具体参见<a href="">github</a>。</p>
+<p>以上，先爬取ip并验证，即可获得免费的代理ip。具体参见<a href="https://github.com/TristanSong/Github/tree/master/Projects/changzhouFang/baiduPlace" target="_blank" rel="external">github</a>。</p>
 
       
 
@@ -501,10 +501,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">matplotlib</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">刀柄管理</a>
               </li>
              
@@ -514,6 +510,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">常州住房</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">matplotlib</a>
               </li>
              
               <li class="article-tag-list-item">
