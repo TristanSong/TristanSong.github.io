@@ -205,16 +205,9 @@ var _hmt = _hmt || [];
 <li>在yilia／_config.yml中添加</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">livere: true</div></pre></td></tr></table></figure>
-<ul>
-<li>添加安装代码:\layout_partial\post目录下添加livere.ejs，把livere安装代码复制进去，文件内容如下，其中data-uid就是你自己的data-uid。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;!-- 来必力City版安装代码 --&gt;</div><div class="line">&lt;div id=&quot;lv-container&quot; data-id=&quot;city&quot; data-uid=&quot;your uid&quot;&gt;</div><div class="line">	&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">   (function(d, s) &#123;</div><div class="line">       var j, e = d.getElementsByTagName(s)[0];</div><div class="line"></div><div class="line">       if (typeof LivereTower === &apos;function&apos;) &#123; return; &#125;</div><div class="line"></div><div class="line">       j = d.createElement(s);</div><div class="line">       j.src = &apos;https://cdn-city.livere.com/js/embed.dist.js&apos;;</div><div class="line">       j.async = true;</div><div class="line"></div><div class="line">       e.parentNode.insertBefore(j, e);</div><div class="line">   &#125;)(document, &apos;script&apos;);</div><div class="line">	&lt;/script&gt;</div><div class="line">&lt;noscript&gt; 为正常使用来必力评论功能请激活JavaScript&lt;/noscript&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;!-- City版安装代码已完成 --&gt;</div></pre></td></tr></table></figure>
-<ul>
-<li>调用功能：最后在layout_partial\article.ejs中&lt;% if (!index &amp;&amp; post.comments){ %&gt;后面添加如下代码：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;% if (theme.livere)&#123; %&gt;</div><div class="line">&lt;%- partial(&apos;post/livere&apos;, &#123;</div><div class="line">    key: post.slug,</div><div class="line">    title: post.title,</div><div class="line">    url: config.url+url_for(post.path)</div><div class="line">  &#125;) %&gt;</div><div class="line">&lt;% &#125; %&gt;</div></pre></td></tr></table></figure>
-<p>以上，<a href="http://jomsou.cn/2017/07/16/livere/" target="_blank" rel="external">参考</a>。</p>
-
+        
+          <a class="article-more-a" href="/HEXO主题yilia添加livere来必力.html#more">more >></a>
+        
       
 
       
