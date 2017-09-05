@@ -4,6 +4,23 @@
 
     
   <url>
+    <loc>http://tristansong.club/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%BB%9F%E8%AE%A1%E5%AD%A6.html</loc>
+    <lastmod>2017-09-05T14:32:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>深入浅出统计学</title>
+        <pubTime>2017-09-05T13:36:34.000Z</pubTime>
+        
+        <tag>统计学</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tristansong.club/HEXO%E4%B8%BB%E9%A2%98yilia%E6%B7%BB%E5%8A%A0livere%E6%9D%A5%E5%BF%85%E5%8A%9B.html</loc>
     <lastmod>2017-09-04T16:52:44.000Z</lastmod>
     <data>
@@ -49,9 +66,9 @@
         <title>OEE无纸化</title>
         <pubTime>2017-09-02T06:16:09.000Z</pubTime>
         
-        <tag>OEE</tag>
-         
         <tag>数据可视化</tag>
+         
+        <tag>OEE</tag>
          
         <tag>tkinter</tag>
          
@@ -70,9 +87,9 @@
         <title>SPC数据可视化 - 2</title>
         <pubTime>2017-09-02T06:15:30.000Z</pubTime>
         
-        <tag>数据可视化</tag>
-         
         <tag>SPC</tag>
+         
+        <tag>数据可视化</tag>
          
         <tag>echarts</tag>
          
@@ -93,9 +110,9 @@
         <title>SPC数据可视化 - 1</title>
         <pubTime>2017-09-02T06:15:15.000Z</pubTime>
         
-        <tag>tkinter</tag>
-         
         <tag>SPC</tag>
+         
+        <tag>tkinter</tag>
          
         <tag>mysql</tag>
          
