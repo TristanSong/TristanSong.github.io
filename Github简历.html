@@ -6,26 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://tristansong.club">
-  <title>SPC数据可视化 - 2 | 一地鸡毛</title>
+  <title>Github简历 | 一地鸡毛</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="上一章我们实现了SPC的数据录入，现在，我们要使用echarts、ajax、PHP、jQuery实现数据的动态可视化。">
-<meta name="keywords" content="数据可视化,SPC,echarts,PHP">
+  <meta name="description" content="今天，套用Github Pages部署自己的简历实现了自己的简历，以后更新简历，只需要copy outerhtml，替换原网页内容就好了。不得不说人家做的太棒，主要是网页的东西，能大概借用就好了！">
+<meta name="keywords" content="Github,简历">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SPC数据可视化 - 2">
-<meta property="og:url" content="http://tristansong.club/SPC数据可视化-2.html">
+<meta property="og:title" content="Github简历">
+<meta property="og:url" content="http://tristansong.club/Github简历.html">
 <meta property="og:site_name" content="一地鸡毛">
-<meta property="og:description" content="上一章我们实现了SPC的数据录入，现在，我们要使用echarts、ajax、PHP、jQuery实现数据的动态可视化。">
+<meta property="og:description" content="今天，套用Github Pages部署自己的简历实现了自己的简历，以后更新简历，只需要copy outerhtml，替换原网页内容就好了。不得不说人家做的太棒，主要是网页的东西，能大概借用就好了！">
 <meta property="og:locale" content="Chinese & English">
-<meta property="og:image" content="http://ov73401nx.bkt.clouddn.com/SPC_2.png">
-<meta property="og:image" content="http://ov73401nx.bkt.clouddn.com/SPC_3.png">
-<meta property="og:image" content="http://ov73401nx.bkt.clouddn.com/SPC_4.png">
-<meta property="og:image" content="http://ov73401nx.bkt.clouddn.com/SPC_5.png">
-<meta property="og:image" content="http://ov73401nx.bkt.clouddn.com/SPC_6.png">
-<meta property="og:updated_time" content="2017-09-04T16:06:39.000Z">
+<meta property="og:updated_time" content="2017-09-08T15:56:29.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SPC数据可视化 - 2">
-<meta name="twitter:description" content="上一章我们实现了SPC的数据录入，现在，我们要使用echarts、ajax、PHP、jQuery实现数据的动态可视化。">
-<meta name="twitter:image" content="http://ov73401nx.bkt.clouddn.com/SPC_2.png">
+<meta name="twitter:title" content="Github简历">
+<meta name="twitter:description" content="今天，套用Github Pages部署自己的简历实现了自己的简历，以后更新简历，只需要copy outerhtml，替换原网页内容就好了。不得不说人家做的太棒，主要是网页的东西，能大概借用就好了！">
   
     <link rel="alternative" href="/atom.xml" title="一地鸡毛" type="application/atom+xml">
   
@@ -184,102 +178,27 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-SPC数据可视化-2" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Github简历" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      SPC数据可视化 - 2
+      Github简历
     </h1>
   
 
         
-        <a href="/SPC数据可视化-2.html" class="archive-article-date">
-  	<time datetime="2017-09-02T06:15:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-02</time>
+        <a href="/Github简历.html" class="archive-article-date">
+  	<time datetime="2017-09-08T15:51:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-08</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>上一章我们实现了SPC的数据录入，现在，我们要使用echarts、ajax、PHP、jQuery实现数据的动态可视化。</p>
-<a id="more"></a>
-<h2 id="xampp"><a href="#xampp" class="headerlink" title="xampp"></a>xampp</h2><p>首先，要实现以上功能需要安装:mysql, php, apache，配置起来烦的要死，特别是现在我还是windows, mac两个平台。</p>
-<p>方便起见，可以直接搜索安装xampp，都已经配置好了，很方便，具体安装及后期使用可以参考<a href="http://blog.csdn.net/xxj_jing/article/details/49664209" target="_blank" rel="external">链接</a>。</p>
-<p><img src="http://ov73401nx.bkt.clouddn.com/SPC_2.png"></p>
-<h2 id="Echarts"><a href="#Echarts" class="headerlink" title="Echarts"></a>Echarts</h2><p><a href="http://echarts.baidu.com/" target="_blank" rel="external">Echarts</a>是百度一款数据可视化的前段工具库，使用时只需下载echarts.js库即可，推荐直接使用完整版。同时，依靠百度地图，可以下载所需地图用于地图可视化。</p>
-<p>使用时，直接在html网页内如下导入即可：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;script src=&quot;echarts.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;script src=&quot;map/js/china.js&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
-<ul>
-<li>具体实现：在网页内显示图表有点类似python中的tkinter，echarts就是tkinter的GUI界面，先申请个container当作基准canvas，再在canvas上面绘制数据生成的图表。详细内容可以<a href="http://blog.csdn.net/marksinoberg/article/details/52875610" target="_blank" rel="external">参考</a>。</li>
-</ul>
-<h2 id="总体框架"><a href="#总体框架" class="headerlink" title="总体框架"></a>总体框架</h2><p>由于实际需要，数据库表的数量一直在动态更新，如：增加了一台机床，需要增加一张表用于存储。因此，需要两个html：</p>
-<ul>
-<li>spc_1.html:显示数据库所有的表，在输入待查看的表后跳转到spc_2.html。</li>
-<li>spc_2.html:接收spc_1.html传递来的数据，显示查看的表。</li>
-</ul>
-<p>以上两个网页都需要使用php、ajax、jquery从数据中动态数据，显示到前端来。</p>
-<h3 id="spc-1-html"><a href="#spc-1-html" class="headerlink" title="spc_1.html"></a>spc_1.html</h3><p>最终效果如图(比较简陋，就不去在学css美化了)，其中显示的数据为动态从数据库中提取的表名。下面我们来看看如何做</p>
-<p><img src="http://ov73401nx.bkt.clouddn.com/SPC_3.png"></p>
-<ul>
-<li>PHP端：从数据库中提取表名，返回json数据</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">header(&quot;Content-type=text/json, charset=UTF-8&quot;);</div><div class="line">//连接MariaDB数据库</div><div class="line">$conn = mysqli_connect(&quot;localhost&quot;,&quot;root&quot;,&quot;&quot;) or die(&quot;Connection failed!&quot;);</div><div class="line">mysqli_query($conn, &quot;set names utf-8&quot;);</div><div class="line">mysqli_select_db($conn, &quot;nova_spc&quot;);</div><div class="line"></div><div class="line">//获取所有机床数据库的名称</div><div class="line">$results = mysqli_query($conn, &quot;SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA=&apos;nova_spc&apos;&quot;);</div><div class="line"></div><div class="line">$names = array();</div><div class="line"></div><div class="line">while ($row = mysqli_fetch_array($results, MYSQLI_ASSOC))&#123;</div><div class="line">	$names[] = $row[&quot;TABLE_NAME&quot;];</div><div class="line">&#125;</div><div class="line"></div><div class="line">sort($names);</div><div class="line"></div><div class="line">mysqli_close($conn);</div><div class="line">echo json_encode($names);</div><div class="line">?&gt;</div></pre></td></tr></table></figure>
-<p>验证一下，直接在浏览器端即可查看</p>
-<p><img src="http://ov73401nx.bkt.clouddn.com/SPC_4.png"></p>
-<ul>
-<li>JQuery &amp; Ajax处理</li>
-</ul>
-<p>在我们的spc_1.html网页内，使用JQuery &amp; Ajax获取并处理json数据。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">//初始化数组，用于存储从数据库中提取到的数据</div><div class="line">var names = [];</div><div class="line"></div><div class="line">//调用ajax实现异步加载数据</div><div class="line">function get_names()&#123;</div><div class="line">	$.ajax(&#123;</div><div class="line">		type:&quot;post&quot;,</div><div class="line">		async:false,</div><div class="line">		url: &quot;http://localhost/myphp/SPC/spc_cnc.php&quot;,</div><div class="line">		data:&#123;&#125;,</div><div class="line">		dataType:&quot;json&quot;,</div><div class="line">		success: function(result)&#123;</div><div class="line">			if(result)&#123;</div><div class="line">				for (var i=0; i&lt;result.length; i++)&#123;</div><div class="line">					names.push(result[i]);</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;,</div><div class="line">		error: function(errmsg)&#123;</div><div class="line">			alert(&quot;Ajax获取服务器数据出错&quot;+errmsg);</div><div class="line">		&#125;</div><div class="line">	&#125;);</div><div class="line">return names;</div><div class="line">&#125;</div><div class="line">//执行异步请求</div><div class="line">get_names();</div></pre></td></tr></table></figure>
-<ul>
-<li>localStorage</li>
-</ul>
-<p>为了能够传递参数，一种是直接从网址上面读取参数，很明显不实际，另一种就是使用浏览器的localstorage，spc_1.html将参数传递进入localstorage，spc_2.html从中读取，再根据该参数从数据库读取相应数据。具体代码见下，增加了对表单的处理。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">//输入项检查</div><div class="line">function checkInput()&#123;</div><div class="line">	var name = document.getElementById(&apos;name&apos;).value;</div><div class="line">	var num = document.getElementById(&apos;num&apos;).value;</div><div class="line">	for (i=0; i&lt;names.length; i++)&#123;</div><div class="line">		if (name == names[i]) &#123;</div><div class="line">			//利用localStorage进行网页间的参数传递，本地网页不支持localStorage，必须使用localhost</div><div class="line">			//地址栏传递参数并不适合本例，因为跳转的网页固定，增加地址栏参数则无法打开</div><div class="line">			var storage = window.localStorage;</div><div class="line">			storage[&quot;name&quot;] = name;</div><div class="line">			if (num == &apos;&apos;)&#123;</div><div class="line">				//默认显示数量为50</div><div class="line">				storage[&quot;num&quot;] = 50;</div><div class="line">			&#125;else&#123;</div><div class="line">				storage[&quot;num&quot;] = num;</div><div class="line">			&#125;</div><div class="line">			return true;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	alert(&apos;请从上面选择待查看内容！&apos;);</div><div class="line">	return false;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="spc-2-html"><a href="#spc-2-html" class="headerlink" title="spc_2.html"></a>spc_2.html</h3><p>以上我们完成了表名的动态显示，及参数的传递，这部分我们就要根据传递来的表名参数，从数据库中提取相应数据，使用echarts显示在前端。</p>
-<ul>
-<li>PHP数据提取</li>
-</ul>
-<p>具体处理方法和上面大同小异，唯一区别在于使用了动态参数，具体为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">从localstorage提取并传递来的参数：表名、数量</div><div class="line">$name = $_POST[&apos;name&apos;];</div><div class="line">$num = $_POST[&apos;num&apos;];</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">数据提取时参数的使用方法</div><div class="line">$results_1 = mysqli_query($conn, &quot;SELECT m_time, t1, t2, t3, t4, t5, t6, t7, t8 FROM &#123;$name&#125; WHERE m_time&lt;NOW() ORDER BY m_time LIMIT &#123;$num&#125;&quot;);</div></pre></td></tr></table></figure>
-<p>其他部分主要为SPC的使用公式，最终返回以下数据:时间、公差上限、公差中值、公差下限、数据中值、上控制限、下控制限、实测值、极差。</p>
-<p><img src="http://ov73401nx.bkt.clouddn.com/SPC_5.png"></p>
-<ul>
-<li>JQuery &amp; Ajax处理</li>
-</ul>
-<p>和上一部分的处理差不多，只不过更多了点，详细的看代码</p>
-<ul>
-<li><p><strong>echarts数据处理</strong></p>
-</li>
-<li><p>导入echarts模块</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;script src=&quot;./jquery-3.2.1.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;script src=&quot;./echarts.min.js&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
-<ul>
-<li>申请canvas</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;!--创建用于放置图表的画布--&gt;</div><div class="line">&lt;div id=&apos;diffContainer&apos; style=&apos;width: 1340px; height: 325px;&apos;&gt;&lt;/div&gt;</div></pre></td></tr></table></figure>
-<ul>
-<li>初始化canvas</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//通过echarts.init方法初始化echarts实例，并通过setOption生成图表</div><div class="line">var diffChart = echarts.init(document.getElementById(&quot;diffContainer&quot;));</div></pre></td></tr></table></figure>
-<ul>
-<li>定义图表及数据</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line">var diff = &#123;</div><div class="line">	title:&#123;&#125;,</div><div class="line">	toolbox:&#123;</div><div class="line">		feature:&#123;</div><div class="line">			dataZoom:&#123;</div><div class="line">				yAxisIndex:&apos;none&apos;</div><div class="line">			&#125;,</div><div class="line">			restore:&#123;&#125;,</div><div class="line">			saveAsImage:&#123;&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;,</div><div class="line">	tooltip:&#123;</div><div class="line">		text:true</div><div class="line">	&#125;,</div><div class="line">	grid:&#123;</div><div class="line">		left: &apos;1%&apos;,</div><div class="line">		right: &apos;1%&apos;,</div><div class="line">		bottom: &apos;3%&apos;,</div><div class="line">		containLabel: true</div><div class="line">	&#125;,</div><div class="line">	legend:&#123;</div><div class="line">		data:[&apos;极差&apos;]</div><div class="line">	&#125;,</div><div class="line">	xAxis:&#123;</div><div class="line">		data:X_TIME,</div><div class="line">		show:true</div><div class="line">	&#125;,</div><div class="line">	yAxis:&#123;</div><div class="line">		type:&apos;value&apos;,</div><div class="line">		scale:true</div><div class="line">	&#125;,</div><div class="line">	dataZoom:[</div><div class="line">		&#123;</div><div class="line">			show:true,</div><div class="line">			realtime:true,</div><div class="line">			start:25,</div><div class="line">			end:75,</div><div class="line">		&#125;,</div><div class="line">		&#123;</div><div class="line">			type:&apos;inside&apos;,</div><div class="line">			realtime:true,</div><div class="line">			start:50,</div><div class="line">			end:85,</div><div class="line">		&#125;</div><div class="line">	],</div><div class="line">	series:[</div><div class="line">	&#123;</div><div class="line">		name:&apos;极差&apos;,</div><div class="line">		type:&apos;line&apos;,</div><div class="line">		data:DIFF</div><div class="line">	&#125;</div><div class="line">	]</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<ul>
-<li>最后的最后：将配置项赋给chart对象，来显示相关的数据</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">diffChart.setOption(diff);</div></pre></td></tr></table></figure>
-<p>以上实现了一个简单的线图，我们还有其他的七个数据在另一个表，详细的就看<a href="https://github.com/TristanSong/Github/tree/master/Projects/SPC/SPC/SPC_php" target="_blank" rel="external">github</a>。</p>
-<p>最后看看效果!</p>
-<p>实现定时网页刷新可加入代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta http-equiv=&quot;refresh&quot; content=&quot;3600&quot;&gt;</div></pre></td></tr></table></figure>
-<p><img src="http://ov73401nx.bkt.clouddn.com/SPC_6.png"></p>
+        <p>今天，套用<a href="https://zhuanlan.zhihu.com/p/22250197" target="_blank" rel="external">Github Pages部署自己的简历</a>实现了自己的<a href="https://github.com/TristanSong/Github/tree/master/CV" target="_blank" rel="external">简历</a>，以后更新简历，只需要copy outerhtml，替换原网页内容就好了。不得不说人家做的太棒，主要是网页的东西，能大概借用就好了！</p>
 
       
 
@@ -324,19 +243,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">数据可视化</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Github</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">SPC</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">echarts</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">简历</a>
         		</li>
       		
 		</ul>
@@ -355,18 +266,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/OEE无纸化.html" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          OEE无纸化
-        
-      </div>
-    </a>
   
-  
-    <a href="/SPC数据可视化-1.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">SPC数据可视化 - 1</div>
+    <a href="/深入浅出统计学.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">深入浅出统计学</div>
       <i class="icon-circle-right"></i>
     </a>
   

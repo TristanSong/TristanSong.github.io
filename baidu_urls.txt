@@ -1,3 +1,4 @@
+http://tristansong.club/Github简历.html
 http://tristansong.club/深入浅出统计学.html
 http://tristansong.club/HEXO主题yilia添加livere来必力.html
 http://tristansong.club/刀柄数据库管理.html
@@ -7,4 +8,3 @@ http://tristansong.club/HEXO网站访问统计显示.html
 http://tristansong.club/HEXO添加Disqus评论.html
 http://tristansong.club/HEXO百度统计.html
 http://tristansong.club/OEE无纸化.html
-http://tristansong.club/SPC数据可视化-2.html
