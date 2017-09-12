@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://tristansong.club/HEXO%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE.html</loc>
+    
+    <lastmod>2017-09-12T15:08:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tristansong.club/tags/index.html</loc>
+    
+    <lastmod>2017-09-12T14:44:36.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tristansong.club/Github%E7%AE%80%E5%8E%86.html</loc>
     
     <lastmod>2017-09-08T15:56:29.000Z</lastmod>
@@ -145,13 +159,6 @@
     <loc>http://tristansong.club/HEXO%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2.html</loc>
     
     <lastmod>2017-08-26T08:14:49.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tristansong.club/HEXO%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE.html</loc>
-    
-    <lastmod>2017-08-26T08:14:36.000Z</lastmod>
     
   </url>
   
